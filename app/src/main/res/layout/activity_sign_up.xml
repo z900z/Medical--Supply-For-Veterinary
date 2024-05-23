@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_5sdp">
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
+
+
+    <View
+        android:id="@+id/strength_level_indicator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="@+id/til_password"
+        app:layout_constraintStart_toStartOf="@+id/til_password"
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_400sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_logo"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@color/orange"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/logo"
+        app:layout_constraintStart_toStartOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/name"
+        android:orientation="horizontal"
+        android:textColorHint="@color/orange"
+        app:boxStrokeColor="@color/orange"
+        app:hintTextColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register"
+        app:startIconDrawable="@drawable/person"
+        app:startIconTint="@color/orange">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            app:hintTextColor="@color/light_green"
+            android:paddingStart="@dimen/_30sdp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/orange"
+        app:boxStrokeColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_user_name"
+        app:startIconDrawable="@drawable/icon_mail"
+        app:startIconTint="@color/orange"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_30sdp"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/orange"
+        app:boxStrokeColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_user_email"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/orange"
+        app:startIconDrawable="@drawable/lock"
+        app:startIconTint="@color/orange">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_30sdp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/button"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specialChar_txt" />
+
+
+    <TextView
+        android:id="@+id/strength_level_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/til_password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/strength_level_indicator"
+        tools:text="weak" />
+
+
+    <ImageView
+        android:id="@+id/lowerCase_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/check_box"
+        app:layout_constraintStart_toStartOf="@+id/til_password"
+        app:layout_constraintTop_toBottomOf="@+id/til_password"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/lowerCase_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/lowercase_letters"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerCase_img"
+        app:layout_constraintStart_toEndOf="@+id/lowerCase_img"
+        app:layout_constraintTop_toTopOf="@+id/lowerCase_img" />
+
+    <ImageView
+        android:id="@+id/upperCase_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/lowerCase_img"
+        app:layout_constraintTop_toBottomOf="@+id/lowerCase_img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/upperCase_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/uppercase_letters"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/upperCase_img"
+        app:layout_constraintStart_toEndOf="@+id/upperCase_img"
+        app:layout_constraintTop_toTopOf="@+id/upperCase_img" />
+
+    <ImageView
+        android:id="@+id/digit_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/upperCase_img"
+        app:layout_constraintTop_toBottomOf="@+id/upperCase_img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/digit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/digits"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/digit_img"
+        app:layout_constraintStart_toEndOf="@+id/digit_img"
+        app:layout_constraintTop_toTopOf="@+id/digit_img" />
+
+    <ImageView
+        android:id="@+id/specialChar_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/digit_img"
+        app:layout_constraintTop_toBottomOf="@+id/digit_img"
+        app:srcCompat="@drawable/ic_checkmark"
+        app:tint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/specialChar_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/special_characters"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/specialChar_img"
+        app:layout_constraintStart_toEndOf="@+id/specialChar_img"
+        app:layout_constraintTop_toTopOf="@+id/specialChar_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

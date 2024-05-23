@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "962087706009",
+    "project_id": "medical-supply-for-veterinary",
+    "storage_bucket": "medical-supply-for-veterinary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962087706009:android:41ca4bbecc05047c5f0708",
+        "android_client_info": {
+          "package_name": "com.example.medicalsupply"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6VTaTaX13LhvISSG9Y4EA6n3SoZJYaKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
